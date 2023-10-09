@@ -132,3 +132,9 @@ https://pestphp.com/docs/installation
 composer search test
 composer require pestphp/pest
 ./vendor/bin/pest --init
+
+- run test
+  vendor/bin/pest
+
+// about pest
+https://github.com/pestphp/pest
