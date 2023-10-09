@@ -127,5 +127,5 @@ $_SESSION['name'] = 'victor braz';
 
 ---
 
-Author: Victor Braz
-Contact: victor.90braz@gmail.com
+composer search test
+composer require pestphp/pest
