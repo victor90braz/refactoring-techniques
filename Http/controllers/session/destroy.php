@@ -1,6 +1,8 @@
 <?php
 
-logout();
+namespace Core\Middleware;
+
+$_SESSION = [];
 
 header('location: /');
 exit();

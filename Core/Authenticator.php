@@ -1,6 +1,8 @@
 <?php
 
-namespace Core;
+namespace Core\Middleware;
+
+use Core\App;
 
 class Authenticator
 {
@@ -35,7 +37,6 @@ class Authenticator
 
     public function logout()
     {
-        $_SESSION = [];
         session_destroy();
 
         $params = session_get_cookie_params();
