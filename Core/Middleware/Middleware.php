@@ -1,28 +1,26 @@
 <?php
 
 namespace Core\Middleware;
-use Core\Middleware\Auth;
-use Core\Middleware\Guest;
 
-class Middleware {
+class Middleware
+{
+    public const MAP = [
+        'guest' => Guest::class,
+        'auth' => Authenticated::class
+    ];
 
-  public const MAP = [
-    'guest' => Guest::class,
-    'auth' => Auth::class
-  ];
+    public static function resolve($key)
+    {
+        if (!$key) {
+            return;
+        }
 
-  static public function resolve($key) {
+        $middleware = static::MAP[$key] ?? false;
 
-    if (!$key) {
-      return;
+        if (!$middleware) {
+            throw new \Exception("No matching middleware found for key '{$key}'.");
+        }
+
+        (new $middleware)->handle();
     }
-
-    $middleware = static::MAP[$key] ?? false;
-
-    if (!$middleware) {
-      throw new \Exception("No matching middleware found for key '{$key}'");
-    }
-
-    (new $middleware)->handle();
-  }
 }

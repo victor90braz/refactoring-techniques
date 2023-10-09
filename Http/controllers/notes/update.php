@@ -19,7 +19,7 @@ authorize($note['user_id'] === $currentUserId);
 // validate the form
 $errors = [];
 
-if (! Validator::string($_POST['body'], 1, 100)) {
+if (! Validator::string($_POST['body'], 1, 10)) {
     $errors['body'] = 'A body of no more than 1,000 characters is required.';
 }
 
