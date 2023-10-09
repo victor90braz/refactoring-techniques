@@ -1,0 +1,15 @@
+{
+  "name": "braz9/session-6",
+  "authors": [
+    {
+      "name": "victor braz",
+      "email": "victor.90braz@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Core\\": "Core/"
+    }
+  }
+}
