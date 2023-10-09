@@ -127,3 +127,17 @@ Generating autoload files
 }
 }
 }
+
+// two ways to get a package
+
+- info terminal
+  composer search collections
+
+- downloading
+  https://packagist.org/packages/illuminate/collections
+
+or
+
+- command terminal
+
+composer require illuminate/collections
