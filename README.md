@@ -125,16 +125,31 @@ $_SESSION['name'] = 'victor braz';
   composer require package_name
   ```
 
+### Testing with Pest Framework:
+
+- **Pest Installation:**
+
+  To install Pest, follow the instructions provided in the [Pest Documentation](https://pestphp.com/docs/installation).
+
+- **Initialize Pest:**
+
+  Run the following command to initialize Pest in your project:
+
+  ```sh
+  ./vendor/bin/pest --init
+  ```
+
+- **Running Tests:**
+
+  Use the following command to run tests with Pest:
+
+  ```sh
+  vendor/bin/pest
+  ```
+
+For more information about Pest, visit the [Pest GitHub repository](https://github.com/pestphp/pest).
+
 ---
 
-https://pestphp.com/docs/installation
-
-composer search test
-composer require pestphp/pest
-./vendor/bin/pest --init
-
-- run test
-  vendor/bin/pest
-
-// about pest
-https://github.com/pestphp/pest
+Author: Victor Braz
+Contact: victor.90braz@gmail.com
