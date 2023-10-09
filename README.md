@@ -1,8 +1,8 @@
-# Laracasts Course - Session 5
+# Laracasts Course - Session 6
 
-This repository is for the Laracasts Course on Sessions and Authentication.
+This repository is for the Laracasts Course on Refactoring Techniques.
 
-GitHub Repository: [Sessions and Authentication GitHub Repository](https://github.com/victor90braz/sessions-authentication.git)
+GitHub Repository: [Refactoring Techniques GitHub Repository](https://github.com/victor90braz/refactoring-techniques.git)
 
 ## Laravel Setup with Laragon
 
