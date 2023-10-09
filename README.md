@@ -127,5 +127,8 @@ $_SESSION['name'] = 'victor braz';
 
 ---
 
+https://pestphp.com/docs/installation
+
 composer search test
 composer require pestphp/pest
+./vendor/bin/pest --init
