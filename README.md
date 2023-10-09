@@ -1,6 +1,6 @@
 # Laracasts Course - Session 6
 
-This repository is for the Laracasts Course on Refactoring Techniques.
+This repository is part of the Laracasts Course on Refactoring Techniques.
 
 GitHub Repository: [Refactoring Techniques GitHub Repository](https://github.com/victor90braz/refactoring-techniques.git)
 
@@ -18,14 +18,15 @@ GitHub Repository: [Refactoring Techniques GitHub Repository](https://github.com
 ### Using PHP in the Terminal (CMD):
 
 - **Check Available PHP Commands:**
-  You can check the available PHP commands using the following in the terminal:
+  To explore available PHP commands, execute the following in the terminal:
 
   ```sh
   php -h
   ```
 
 - **Start a Local PHP Server:**
-  To start a local PHP server, use the following command in the terminal:
+  Start a local PHP server using the following command in the terminal:
+
   ```sh
   php -S localhost:8888 -t public
   ```
@@ -64,80 +65,67 @@ $_SESSION['name'] = 'victor braz';
   php get_tmpdir.php
   ```
 
-// run composer in the terminal (cd)
-php composer.phar
+### Composer Setup and Usage:
 
-composer init
+- **Run Composer in the Terminal (cd):**
 
-Welcome to the Composer config generator
+  Run the following command to initialize a new composer.json file:
 
-This command will guide you through creating your composer.json config.
+  ```sh
+  composer init
+  ```
 
-Package name (<vendor>/<name>) [braz9/session-6]:
-Description []:
-Author [victor braz <victor.90braz@gmail.com>, n to skip]:
-Minimum Stability []:
-Package Type (e.g. library, project, metapackage, composer-plugin) []:
-License []:
+  Follow the on-screen prompts to generate the configuration.
 
-Define your dependencies.
+- **Composer Installation:**
 
-Would you like to define your dependencies (require) interactively [yes]? no
-Would you like to define your dev dependencies (require-dev) interactively [yes]? no
-Add PSR-4 autoload mapping? Maps namespace "Braz9\Session6" to the entered relative path. [src/, n to skip]: no
+  Install the necessary dependencies using the following command:
 
-{
-"name": "braz9/session-6",
-"authors": [
-{
-"name": "victor braz",
-"email": "victor.90braz@gmail.com"
-}
-],
-"require": {}
-}
+  ```sh
+  composer install
+  ```
 
-Do you confirm generation [yes]? yes
-Would you like the vendor directory added to your .gitignore [yes]? yes
+- **Composer Autoload:**
 
-$ composer install
-No composer.lock file present. Updating dependencies to latest instead of installing from lock file. See https://getcomposer.org/install for more information.
-Loading composer repositories with package information
-Updating dependencies
-Nothing to modify in lock file
-Writing lock file
-Installing dependencies from lock file (including require-dev)
-Nothing to install, update or remove
-Generating autoload files
+  After installation, generate the autoload files with:
 
-- $ composer dump-autoload
+  ```sh
+  composer dump-autoload
+  ```
 
-{
-"name": "braz9/session-6",
-"authors": [
-{
-"name": "victor braz",
-"email": "victor.90braz@gmail.com"
-}
-],
-"require": {},
-"autoload": {
-"psr-4": {
-"Core\\": "Core/"
-}
-}
-}
+- **Add Vendor Directory to .gitignore:**
 
-// two ways to get a package
+  It's recommended to add the vendor directory to .gitignore:
 
-- info terminal
-  composer search collections
+  ```sh
+  echo '/vendor/' >> .gitignore
+  ```
 
-- downloading
-  https://packagist.org/packages/illuminate/collections
+### Package Management:
 
-or
+- **Getting Packages:**
 
-- command terminal
+  There are two ways to acquire a package:
 
-composer require illuminate/collections
+  - **Using Terminal:**
+    Run the following command to search for packages:
+
+    ```sh
+    composer search package_name
+    ```
+
+  - **Direct Download:**
+    Visit [Packagist - The PHP Package Repository](https://packagist.org) and search for the package you need. You can then download it manually or install it via Composer.
+
+- **Installing Packages:**
+
+  Use the following command to install a package via Composer:
+
+  ```sh
+  composer require package_name
+  ```
+
+---
+
+Author: Victor Braz
+Contact: victor.90braz@gmail.com
