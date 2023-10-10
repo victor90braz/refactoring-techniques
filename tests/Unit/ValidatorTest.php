@@ -1,6 +1,7 @@
   <?php
 
-  use Core\Validator;
+use Core\Authenticator;
+use Core\Validator;
 
   // $value, $min = 1, $max = INF
   it('validate a string', function() {
@@ -53,3 +54,23 @@
     expect($result)->toBeFalse();
 
   })->only();
+
+  it('login user', function() {
+      // Start a session
+      session_start();
+
+      // Instantiate the Authenticator class
+      $authenticator = new Authenticator();
+
+      // Mock user data
+      $user = ['email' => 'victor@example.com'];
+
+      // Call the login method with the user array
+      $authenticator->login($user);
+
+      // Check if the session was set correctly
+      expect($_SESSION['user']['email'])->toBe($user['email']);
+
+      // End the session
+      session_destroy();
+  });
