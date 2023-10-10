@@ -20,3 +20,9 @@ it('validates a string with maximum length', function() {
 
   expect($result)->toBeTrue();
 });
+
+it('validates a string with "" ', function() {
+  $result = Validator::string('');
+
+  expect($result)->toBeFalse();
+});
