@@ -38,3 +38,9 @@
 
     expect($result)->toBeTrue();
   });
+
+  it('validate that a number is greater than a given amount', function() {
+    $result = Validator::greaterThan(10,8);
+
+    expect($result)->toBeTrue();
+  })->only();
