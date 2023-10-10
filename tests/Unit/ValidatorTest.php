@@ -44,3 +44,9 @@
 
     expect($result)->toBeTrue();
   })->only();
+
+  it('validate that a number is not greater than a given amount', function() {
+    $result = Validator::greaterThan(10,12);
+
+    expect($result)->toBeFalse();
+  })->only();
